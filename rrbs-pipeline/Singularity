@@ -26,15 +26,13 @@ From: thakk/bioinformatics
     libtiff-devel libtirpc-devel libxcrypt-devel ncurses-devel pango-devel \
     pcre-devel readline-devel tcl-devel tk-devel xz-devel zlib-devel \
     java-1.8.0-openjdk java-1.8.0-openjdk-devel openblas lapack \
-    gcc-gfortran boost boost-devel texlive
+    gcc-gfortran boost boost-devel texlive libxml2-devel
 
   # INSTALL R
   wget https://cran.rstudio.com/src/base/R-3/R-3.6.1.tar.gz
   tar xf R-3.6.1.tar.gz
   cd R-3.6.1
-  ./configure
-  make -j 8
-  make install
+  ./configure && make && make install
   cd ..
   rm -r R-3.6.1
 
